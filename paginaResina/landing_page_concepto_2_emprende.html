@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseña y Crea | Resina con Yuli</title>
+    
+    <!-- Fuentes Modernas (Kajabi Style) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'poppins': ['"Poppins"', 'sans-serif'],
+                        'inter': ['"Inter"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#1E3A8A', // Azul oscuro (Confianza)
+                            lightblue: '#EFF6FF', // Fondo azul muy suave
+                            orange: '#FF6B35', // Naranja CTA (Conversión)
+                            dark: '#0F172A',
+                            gray: '#64748B'
+                        }
+                    },
+                    boxShadow: {
+                        'saas': '0 10px 40px -10px rgba(0,0,0,0.08)',
+                        'saas-hover': '0 20px 40px -10px rgba(0,0,0,0.12)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: #ffffff; color: #0F172A; }
+        .gradient-text {
+            background: linear-gradient(135deg, #1E3A8A, #3B82F6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .blob-bg {
+            position: absolute;
+            filter: blur(80px);
+            z-index: -1;
+            opacity: 0.4;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            display: flex;
+            width: max-content;
+            animation: marquee 35s linear infinite;
+        }
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-white/80 backdrop-blur-lg z-50 border-b border-gray-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2">
+                <img src="media/image/logo-DyC-cropped.png" alt="Diseña y Crea Logo" class="h-20 w-auto">
+            </a>
+            <div class="hidden md:flex gap-8 items-center text-sm font-medium text-brand-gray">
+                <a href="#metodo" class="hover:text-brand-blue transition">El Método</a>
+                <a href="#galeria" class="hover:text-brand-blue transition">Galería</a>
+                <a href="#testimonios" class="hover:text-brand-blue transition">Casos de Éxito</a>
+                <a href="#bonos" class="hover:text-brand-blue transition">Bonos</a>
+                <a href="#faq" class="hover:text-brand-blue transition">Preguntas Frecuentes</a>
+            </div>
+            <a href="#oferta" class="text-sm font-bold bg-brand-orange text-white px-6 py-2.5 rounded-full hover:bg-orange-600 hover:scale-105 transition-all shadow-lg shadow-orange-500/30">
+                Empezar Negocio
+            </a>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <header class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+        <!-- Fondos abstractos -->
+        <div class="blob-bg w-[500px] h-[500px] bg-blue-200 rounded-full top-0 left-[-100px]"></div>
+        <div class="blob-bg w-[400px] h-[400px] bg-orange-100 rounded-full bottom-0 right-[-50px]"></div>
+
+        <div class="max-w-7xl mx-auto px-6 flex flex-col-reverse md:flex-row items-center gap-12 relative z-10">
+            <!-- Text Content -->
+            <div class="w-full md:w-[45%] text-center md:text-left">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 text-brand-blue text-xs font-semibold mb-6">
+                    <span class="relative flex h-2 w-2">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-600"></span>
+                    </span>
+                    Actualizado para 2026
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.15] mb-6">
+                    Convierte tu creatividad en un <span class="gradient-text">negocio altamente rentable.</span>
+                </h1>
+                <p class="text-lg text-brand-gray mb-8 max-w-lg mx-auto md:mx-0">
+                    Aprende el arte de la resina epoxi y descubre el sistema exacto para empaquetar, promocionar y vender tus piezas en Instagram con altos márgenes de ganancia.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
+                    <a href="#oferta" class="w-full sm:w-auto text-center text-base font-bold bg-brand-orange text-white px-8 py-4 rounded-xl hover:bg-orange-600 hover:-translate-y-1 transition-all shadow-xl shadow-orange-500/30 flex items-center justify-center gap-2">
+                        Quiero Emprender Hoy <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <p class="text-xs text-brand-gray font-medium flex items-center gap-1">
+                        <i class="fa-solid fa-shield-halved text-green-500"></i> Garantía de 7 días
+                    </p>
+                </div>
+            </div>
+            <!-- Image Content -->
+            <div class="w-full md:w-[55%] relative">
+                <!-- Composición visual: Resina + Ventas -->
+                <div class="relative bg-white p-2 rounded-2xl shadow-saas border border-gray-100 z-10">
+                    <div class="relative rounded-xl overflow-hidden bg-black group aspect-video w-full">
+                        <video class="w-full h-full" autoplay muted loop controls playsinline preload="metadata">
+                            <source src="media/video/VIDEO.mp4" type="video/mp4">
+                            Tu navegador no soporta el reproductor de video.
+                        </video>
+                    </div>
+                    <!-- Pop-up flotante de venta -->
+                    <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl border border-gray-100 flex items-center gap-4 animate-bounce" style="animation-duration: 3s;">
+                        <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600">
+                            <i class="fa-solid fa-dollar-sign"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500 font-medium">Nueva venta en Instagram</p>
+                            <p class="font-bold text-brand-dark">+ $145.00 USD</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. Métricas Rápidas (Barra de Confianza) -->
+    <section class="bg-brand-dark text-white py-10">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-gray-700">
+            <div class="text-center px-4">
+                <p class="text-3xl font-extrabold text-brand-orange mb-1">10k+</p>
+                <p class="text-xs md:text-sm text-gray-400 font-medium">Alumnas Activas</p>
+            </div>
+            <div class="text-center px-4">
+                <p class="text-3xl font-extrabold text-brand-orange mb-1">0</p>
+                <p class="text-xs md:text-sm text-gray-400 font-medium">Experiencia Previa</p>
+            </div>
+            <div class="text-center px-4">
+                <p class="text-3xl font-extrabold text-brand-orange mb-1">15</p>
+                <p class="text-xs md:text-sm text-gray-400 font-medium">Países Alcanzados</p>
+            </div>
+            <div class="text-center px-4">
+                <p class="text-3xl font-extrabold text-brand-orange mb-1">300%</p>
+                <p class="text-xs md:text-sm text-gray-400 font-medium">Margen de Ganancia</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. El Problema vs. La Solución -->
+    <section class="py-24 bg-brand-lightblue">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">La ruta tradicional ya no funciona</h2>
+                <p class="text-brand-gray">Es hora de tomar el control de tu tiempo y tus ingresos.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Problema -->
+                <div class="bg-white p-8 rounded-2xl shadow-saas border-t-4 border-red-500 opacity-90">
+                    <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center text-red-500 mb-6">
+                        <i class="fa-solid fa-xmark text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">El camino agotador</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3 text-brand-gray text-sm">
+                            <i class="fa-solid fa-circle-xmark text-red-400 mt-1"></i> Depender de un sueldo fijo que no alcanza a fin de mes.
+                        </li>
+                        <li class="flex items-start gap-3 text-brand-gray text-sm">
+                            <i class="fa-solid fa-circle-xmark text-red-400 mt-1"></i> Cumplir horarios rígidos lejos de tu familia.
+                        </li>
+                        <li class="flex items-start gap-3 text-brand-gray text-sm">
+                            <i class="fa-solid fa-circle-xmark text-red-400 mt-1"></i> Vender manualidades baratas compitiendo por centavos.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Solución -->
+                <div class="bg-white p-8 rounded-2xl shadow-saas border-t-4 border-brand-blue transform md:-translate-y-4">
+                    <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-brand-blue mb-6">
+                        <i class="fa-solid fa-check text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">El camino de la Creadora</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3 text-brand-gray text-sm">
+                            <i class="fa-solid fa-circle-check text-brand-blue mt-1"></i> Crear piezas exclusivas de alto valor percibido.
+                        </li>
+                        <li class="flex items-start gap-3 text-brand-gray text-sm">
+                            <i class="fa-solid fa-circle-check text-brand-blue mt-1"></i> Trabajar a tu propio ritmo desde la mesa de tu casa.
+                        </li>
+                        <li class="flex items-start gap-3 text-brand-gray text-sm">
+                            <i class="fa-solid fa-circle-check text-brand-blue mt-1"></i> Clientes que pagan felizmente por un diseño único y personalizado.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Temario del Curso (AQUÍ TE LO ENSEÑAMOS TODO) -->
+    <section id="metodo" class="py-24 bg-white scroll-mt-20">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-brand-blue font-bold tracking-wider text-sm uppercase">Temario Completo</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-brand-dark mt-2 mb-4">AQUÍ TE LO ENSEÑAMOS TODO</h2>
+                <p class="text-brand-gray max-w-2xl mx-auto text-sm">En más de 60 clases en video encontrarás todo el conocimiento práctico para convertirte en una experta y lanzar tu marca.</p>
+            </div>
+
+            <!-- Acordeones de Resina -->
+            <div class="space-y-4">
+                <!-- Modulo 1 -->
+                <details class="group border border-gray-100 bg-brand-lightblue/30 rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:bg-brand-lightblue/50">
+                    <summary class="flex justify-between items-center font-bold text-base md:text-lg text-brand-dark cursor-pointer list-none">
+                        <span class="flex items-center gap-3"><span class="w-9 h-9 rounded-lg bg-brand-blue text-white flex items-center justify-center text-sm shrink-0">1</span> BIENVENIDA AL CURSO</span>
+                        <span class="transition group-open:rotate-180 text-brand-blue">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </span>
+                    </summary>
+                    <div class="mt-4 pl-12 text-sm md:text-base text-brand-gray leading-relaxed space-y-2">
+                        <p class="font-medium text-brand-dark">En este módulo aprenderás:</p>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Bienvenida al curso.</li>
+                            <li>Lo que vas a aprender en este programa.</li>
+                            <li>Acceso a la comunidad privada en Telegram para soporte de resina.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <!-- Modulo 2 -->
+                <details class="group border border-gray-100 bg-brand-lightblue/30 rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:bg-brand-lightblue/50">
+                    <summary class="flex justify-between items-center font-bold text-base md:text-lg text-brand-dark cursor-pointer list-none">
+                        <span class="flex items-center gap-3"><span class="w-9 h-9 rounded-lg bg-brand-blue text-white flex items-center justify-center text-sm shrink-0">2</span> MEDIDAS, HERRAMIENTAS Y MATERIALES</span>
+                        <span class="transition group-open:rotate-180 text-brand-blue">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </span>
+                    </summary>
+                    <div class="mt-4 pl-12 text-sm md:text-base text-brand-gray leading-relaxed space-y-2">
+                        <p class="font-medium text-brand-dark">En este módulo aprenderás:</p>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Equipos de seguridad obligatorios y bioseguridad.</li>
+                            <li>Uso de balanzas digitales y vasos medidores.</li>
+                            <li>Herramientas térmicas para la eliminación eficaz de burbujas.</li>
+                            <li>Lista oficial de proveedores de materiales autorizados.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <!-- Modulo 3 -->
+                <details class="group border border-gray-100 bg-brand-lightblue/30 rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:bg-brand-lightblue/50">
+                    <summary class="flex justify-between items-center font-bold text-base md:text-lg text-brand-dark cursor-pointer list-none">
+                        <span class="flex items-center gap-3"><span class="w-9 h-9 rounded-lg bg-brand-blue text-white flex items-center justify-center text-sm shrink-0">3</span> CONOCIENDO LA RESINA Y LOS PIGMENTOS</span>
+                        <span class="transition group-open:rotate-180 text-brand-blue">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </span>
+                    </summary>
+                    <div class="mt-4 pl-12 text-sm md:text-base text-brand-gray leading-relaxed space-y-2">
+                        <p class="font-medium text-brand-dark">En este módulo aprenderás:</p>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Clasificación de tipos de resinas epóxicas y proporciones de mezcla.</li>
+                            <li>Mezclado correcto de tu resina para evitar imperfecciones.</li>
+                            <li>Manejo de pigmentación traslúcida, sólida y tintas al alcohol.</li>
+                            <li>Uso de micas, brillos, glitter y manejo de pan de oro en tus piezas.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <!-- Modulo 4 -->
+                <details class="group border border-gray-100 bg-brand-lightblue/30 rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:bg-brand-lightblue/50">
+                    <summary class="flex justify-between items-center font-bold text-base md:text-lg text-brand-dark cursor-pointer list-none">
+                        <span class="flex items-center gap-3"><span class="w-9 h-9 rounded-lg bg-brand-blue text-white flex items-center justify-center text-sm shrink-0">4</span> LO QUE NECESITAS SABER SOBRE LOS MOLDES</span>
+                        <span class="transition group-open:rotate-180 text-brand-blue">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </span>
+                    </summary>
+                    <div class="mt-4 pl-12 text-sm md:text-base text-brand-gray leading-relaxed space-y-2">
+                        <p class="font-medium text-brand-dark">En este módulo aprenderás:</p>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Tipos de moldes de silicona idóneos para resina.</li>
+                            <li>Técnicas de desmoldado correcto para no dañar las piezas.</li>
+                            <li>Mantenimiento y limpieza profunda para extender la vida útil de tus moldes.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <!-- Modulo 5 -->
+                <details class="group border border-gray-100 bg-brand-lightblue/30 rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:bg-brand-lightblue/50">
+                    <summary class="flex justify-between items-center font-bold text-base md:text-lg text-brand-dark cursor-pointer list-none">
+                        <span class="flex items-center gap-3"><span class="w-9 h-9 rounded-lg bg-brand-blue text-white flex items-center justify-center text-sm shrink-0">5</span> JOYERÍA EN RESINA</span>
+                        <span class="transition group-open:rotate-180 text-brand-blue">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </span>
+                    </summary>
+                    <div class="mt-4 pl-12 text-sm md:text-base text-brand-gray leading-relaxed space-y-2">
+                        <p class="font-medium text-brand-dark">En este módulo aprenderás:</p>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Elaboración de aretes en moldes tridimensionales.</li>
+                            <li>Confección de pulseras y anillos encajados de resina.</li>
+                            <li>Técnicas especiales de vertido en biseles metálicos para collares y dijes.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <!-- Modulo 6 -->
+                <details class="group border border-gray-100 bg-brand-lightblue/30 rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:bg-brand-lightblue/50">
+                    <summary class="flex justify-between items-center font-bold text-base md:text-lg text-brand-dark cursor-pointer list-none">
+                        <span class="flex items-center gap-3"><span class="w-9 h-9 rounded-lg bg-brand-blue text-white flex items-center justify-center text-sm shrink-0">6</span> LLAVEROS EN RESINA</span>
+                        <span class="transition group-open:rotate-180 text-brand-blue">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </span>
+                    </summary>
+                    <div class="mt-4 pl-12 text-sm md:text-base text-brand-gray leading-relaxed space-y-2">
+                        <p class="font-medium text-brand-dark">En este módulo aprenderás:</p>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Llaveros de letras con flores secas encapsuladas.</li>
+                            <li>Llaveros decorativos con técnica de nubes.</li>
+                            <li>Llaveros dinámicos Shaker y piezas en acrílico.</li>
+                            <li>Llaveros con moldes religiosos y letras con pintura acrílica y glitter.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <!-- Modulo 7 -->
+                <details class="group border border-gray-100 bg-brand-lightblue/30 rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:bg-brand-lightblue/50">
+                    <summary class="flex justify-between items-center font-bold text-base md:text-lg text-brand-dark cursor-pointer list-none">
+                        <span class="flex items-center gap-3"><span class="w-9 h-9 rounded-lg bg-brand-blue text-white flex items-center justify-center text-sm shrink-0">7</span> LAPICEROS, AGENDA Y MARCAPÁGINAS</span>
+                        <span class="transition group-open:rotate-180 text-brand-blue">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </span>
+                    </summary>
+                    <div class="mt-4 pl-12 text-sm md:text-base text-brand-gray leading-relaxed space-y-2">
+                        <p class="font-medium text-brand-dark">En este módulo aprenderás:</p>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Uso de moldes cilíndricos para lapiceros personalizados (modelos #1 y #2).</li>
+                            <li>Confección de cubiertas y pastas de agendas con resina epóxica.</li>
+                            <li>Separadores y marcapáginas translúcidos decorativos (modelos #1 y #2).</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <!-- Modulo 8 -->
+                <details class="group border border-gray-100 bg-brand-lightblue/30 rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:bg-brand-lightblue/50">
+                    <summary class="flex justify-between items-center font-bold text-base md:text-lg text-brand-dark cursor-pointer list-none">
+                        <span class="flex items-center gap-3"><span class="w-9 h-9 rounded-lg bg-brand-blue text-white flex items-center justify-center text-sm shrink-0">8</span> ARTÍCULOS PERSONALES</span>
+                        <span class="transition group-open:rotate-180 text-brand-blue">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </span>
+                    </summary>
+                    <div class="mt-4 pl-12 text-sm md:text-base text-brand-gray leading-relaxed space-y-2">
+                        <p class="font-medium text-brand-dark">En este módulo aprenderás:</p>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Diseño y vertido de peine completo en resina con flores secas o brillos.</li>
+                            <li>Fabricación de ganchos decorativos y pinzas de resina para el cabello.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <!-- Modulo 9 -->
+                <details class="group border border-gray-100 bg-brand-lightblue/30 rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:bg-brand-lightblue/50">
+                    <summary class="flex justify-between items-center font-bold text-base md:text-lg text-brand-dark cursor-pointer list-none">
+                        <span class="flex items-center gap-3"><span class="w-9 h-9 rounded-lg bg-brand-blue text-white flex items-center justify-center text-sm shrink-0">9</span> ACCESORIOS PARA CELULAR, PLACAS Y PORTAVASOS</span>
+                        <span class="transition group-open:rotate-180 text-brand-blue">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </span>
+                    </summary>
+                    <div class="mt-4 pl-12 text-sm md:text-base text-brand-gray leading-relaxed space-y-2">
+                        <p class="font-medium text-brand-dark">En este módulo aprenderás:</p>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Personalización de fundas para celular con resina epoxi y Pop Sockets personalizados.</li>
+                            <li>Fabricación de placas de identificación duraderas para mascotas.</li>
+                            <li>Creación y diseño de porta vasos decorativos de resina.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <!-- Modulo 10 -->
+                <details class="group border border-gray-100 bg-brand-lightblue/30 rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:bg-brand-lightblue/50">
+                    <summary class="flex justify-between items-center font-bold text-base md:text-lg text-brand-dark cursor-pointer list-none">
+                        <span class="flex items-center gap-3"><span class="w-9 h-9 rounded-lg bg-brand-blue text-white flex items-center justify-center text-sm shrink-0">10</span> CÓMO SACAR LOS COSTOS Y EMPEZAR A CREAR TU MARCA</span>
+                        <span class="transition group-open:rotate-180 text-brand-blue">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </span>
+                    </summary>
+                    <div class="mt-4 pl-12 text-sm md:text-base text-brand-gray leading-relaxed space-y-2">
+                        <p class="font-medium text-brand-dark">En este módulo aprenderás:</p>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Fórmulas exactas para calcular el costo de los insumos y mano de obra.</li>
+                            <li>Cuánto cobrar por tus accesorios para asegurar tus márgenes de ganancia.</li>
+                            <li>Cómo dar los primeros pasos para crear y posicionar tu marca comercial.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <!-- Modulo 11 -->
+                <details class="group border border-gray-100 bg-brand-lightblue/30 rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:bg-brand-lightblue/50">
+                    <summary class="flex justify-between items-center font-bold text-base md:text-lg text-brand-dark cursor-pointer list-none">
+                        <span class="flex items-center gap-3"><span class="w-9 h-9 rounded-lg bg-brand-blue text-white flex items-center justify-center text-sm shrink-0">11</span> PERSONALIZACIÓN, LISTA DE PROVEEDORES Y CIERRE</span>
+                        <span class="transition group-open:rotate-180 text-brand-blue">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </span>
+                    </summary>
+                    <div class="mt-4 pl-12 text-sm md:text-base text-brand-gray leading-relaxed space-y-2">
+                        <p class="font-medium text-brand-dark">En este módulo aprenderás:</p>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Cómo conseguir la tipografía especial para personalizar tus piezas con names.</li>
+                            <li>Lista completa de proveedores para comprar resina mayorista en tu país.</li>
+                            <li>Despedida del curso e indicaciones finales para solicitar el certificado.</li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4.5. Galería de Creaciones en Resina -->
+    <section id="galeria" class="py-24 bg-brand-lightblue scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-brand-blue font-bold tracking-wider text-sm uppercase">Galería de Trabajos</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Piezas Reales Creadas por Alumnas</h2>
+                <p class="text-brand-gray max-w-2xl mx-auto">Inspírate con las increíbles creaciones y acabados que aprenderás a realizar desde cero en nuestro programa.</p>
+            </div>
+
+            <!-- Grid de Productos Destacados -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                <!-- Reloj -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-saas hover:shadow-saas-hover hover:-translate-y-1 transition-all duration-300 group">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="media/image/RELOJ EN  RESINA.png" alt="Reloj en Resina" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                        <span class="absolute top-4 right-4 bg-brand-orange text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">Alta Gama</span>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-brand-dark mb-1">Reloj de Resina</h4>
+                        <p class="text-brand-gray text-xs">Aprende técnicas de vertido concéntrico y colocación de maquinaria.</p>
+                    </div>
+                </div>
+
+                <!-- Lámpara -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-saas hover:shadow-saas-hover hover:-translate-y-1 transition-all duration-300 group">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="media/image/LAMPARA EN RESINA.png" alt="Lámpara en Resina" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                        <span class="absolute top-4 right-4 bg-brand-blue text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">Más Vendido</span>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-brand-dark mb-1">Lámpara Decorativa</h4>
+                        <p class="text-brand-gray text-xs">Encapsulado tridimensional, manejo de luces LED y control térmico.</p>
+                    </div>
+                </div>
+
+                <!-- Cuadro -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-saas hover:shadow-saas-hover hover:-translate-y-1 transition-all duration-300 group">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="media/image/CUADRO CON RESINA.png" alt="Cuadro Artístico" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                        <span class="absolute top-4 right-4 bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">Arte Fluido</span>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-brand-dark mb-1">Cuadro con Resina</h4>
+                        <p class="text-brand-gray text-xs">Creación de efectos tipo océano, celdas y texturas metálicas en lienzos grandes.</p>
+                    </div>
+                </div>
+
+                <!-- Llaveros -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-saas hover:shadow-saas-hover hover:-translate-y-1 transition-all duration-300 group">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="media/image/LLAVEROS_.png" alt="Llaveros Personalizados" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                        <span class="absolute top-4 right-4 bg-green-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">Venta Rápida</span>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-brand-dark mb-1">Colección de Llaveros</h4>
+                        <p class="text-brand-gray text-xs">Ideal para comenzar a vender rápido. Moldes de letras y personalización.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección de Accesorios y Bisutería -->
+            <div class="bg-white rounded-3xl p-8 shadow-saas border border-gray-100 overflow-hidden">
+                <h3 class="text-xl font-bold text-brand-dark mb-6 flex items-center gap-2">
+                    <i class="fa-solid fa-gem text-brand-orange"></i> Accesorios y Bisutería Creativa
+                </h3>
+                
+                <!-- Contenedor del Carrusel Infinito -->
+                <div class="relative w-full overflow-hidden">
+                    <!-- Gradientes laterales de difuminado -->
+                    <div class="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none"></div>
+                    <div class="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-white via-white/80 to-transparent z-10 pointer-events-none"></div>
+
+                    <!-- Fila del Carrusel que contiene dos sets idénticos para bucle infinito -->
+                    <div class="animate-marquee py-2 flex gap-6">
+                        <!-- Set Original -->
+                        <div class="flex gap-6 shrink-0">
+                            <!-- Accesorios 1 -->
+                            <div class="w-40 md:w-48 aspect-[9/16] bg-gray-50 rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                                <img src="media/image/ACCESORIOS 1.png" alt="Accesorio 1" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+                            </div>
+                            <!-- Accesorios 2 -->
+                            <div class="w-40 md:w-48 aspect-[9/16] bg-gray-50 rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                                <img src="media/image/ACCESORIOS 2.png" alt="Accesorio 2" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+                            </div>
+                            <!-- Accesorios 3 -->
+                            <div class="w-40 md:w-48 aspect-[9/16] bg-gray-50 rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                                <img src="media/image/ACCESORIOS 3.png" alt="Accesorio 3" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+                            </div>
+                            <!-- Accesorios 4 -->
+                            <div class="w-40 md:w-48 aspect-[9/16] bg-gray-50 rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                                <img src="media/image/ACCESORIOS 4.png" alt="Accesorio 4" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+                            </div>
+                            <!-- Accesorios 5 -->
+                            <div class="w-40 md:w-48 aspect-[9/16] bg-gray-50 rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                                <img src="media/image/ACCESORIOS 5.png" alt="Accesorio 5" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+                            </div>
+                            <!-- Accesorios 6 -->
+                            <div class="w-40 md:w-48 aspect-[9/16] bg-gray-50 rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                                <img src="media/image/ACCESORIOS 6.png" alt="Accesorio 6" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+                            </div>
+                            <!-- Accesorios 7 -->
+                            <div class="w-40 md:w-48 aspect-[9/16] bg-gray-50 rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                                <img src="media/image/ACCESORIOS 7.png" alt="Accesorio 7" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+                            </div>
+                            <!-- Accesorios 8 -->
+                            <div class="w-40 md:w-48 aspect-[9/16] bg-gray-50 rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                                <img src="media/image/ACCESORIOS 8.png" alt="Accesorio 8" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+                            </div>
+                        </div>
+
+                        <!-- Set Duplicado para Bucle Infinito -->
+                        <div class="flex gap-6 shrink-0" aria-hidden="true">
+                            <!-- Accesorios 1 -->
+                            <div class="w-40 md:w-48 aspect-[9/16] bg-gray-50 rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                                <img src="media/image/ACCESORIOS 1.png" alt="Accesorio 1" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+                            </div>
+                            <!-- Accesorios 2 -->
+                            <div class="w-40 md:w-48 aspect-[9/16] bg-gray-50 rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                                <img src="media/image/ACCESORIOS 2.png" alt="Accesorio 2" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+                            </div>
+                            <!-- Accesorios 3 -->
+                            <div class="w-40 md:w-48 aspect-[9/16] bg-gray-50 rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                                <img src="media/image/ACCESORIOS 3.png" alt="Accesorio 3" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+                            </div>
+                            <!-- Accesorios 4 -->
+                            <div class="w-40 md:w-48 aspect-[9/16] bg-gray-50 rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                                <img src="media/image/ACCESORIOS 4.png" alt="Accesorio 4" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+                            </div>
+                            <!-- Accesorios 5 -->
+                            <div class="w-40 md:w-48 aspect-[9/16] bg-gray-50 rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                                <img src="media/image/ACCESORIOS 5.png" alt="Accesorio 5" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+                            </div>
+                            <!-- Accesorios 6 -->
+                            <div class="w-40 md:w-48 aspect-[9/16] bg-gray-50 rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                                <img src="media/image/ACCESORIOS 6.png" alt="Accesorio 6" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+                            </div>
+                            <!-- Accesorios 7 -->
+                            <div class="w-40 md:w-48 aspect-[9/16] bg-gray-50 rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                                <img src="media/image/ACCESORIOS 7.png" alt="Accesorio 7" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+                            </div>
+                            <!-- Accesorios 8 -->
+                            <div class="w-40 md:w-48 aspect-[9/16] bg-gray-50 rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                                <img src="media/image/ACCESORIOS 8.png" alt="Accesorio 8" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="text-xs text-brand-gray mt-4 text-center italic">Carrusel continuo interactivo. Pasa el cursor por encima para pausar.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4.6. Biografía de la Instructora -->
+    <section id="instructora" class="py-24 bg-white scroll-mt-20">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="bg-brand-lightblue rounded-3xl p-8 md:p-12 shadow-saas border border-gray-100 flex flex-col-reverse md:flex-row gap-12 items-center">
+                <!-- Contenido de la Bio -->
+                <div class="w-full md:w-3/5 text-center md:text-left">
+                    <span class="text-brand-blue font-bold tracking-wider text-xs uppercase mb-2 block">Tu Mentora</span>
+                    <h2 class="text-3xl font-extrabold text-brand-dark mb-4">Conoce a Yuly Mar Rivas</h2>
+                    <p class="text-brand-gray text-sm leading-relaxed mb-4">
+                        Soy Yuly Mar Rivas: ama de casa, esposa, madre y emprendedora desde muy joven. Me declaro una apasionada enamorada de las manualidades; desde el colegio siempre me destaqué por ser una de las mejores en esta maravillosa área.
+                    </p>
+                    <p class="text-brand-gray text-sm leading-relaxed mb-6">
+                        Hace más de 5 años incursioné en el mundo de la <strong>resina epóxica</strong> y quedé fascinada por su versatilidad. Hoy me dedico a tiempo completo a crear y vender accesorios personalizados con mi propia marca, además de dictar talleres presenciales y online. Mi misión es guiarte paso a paso para que tú también puedas transformar la resina en un negocio rentable y desde la comodidad de tu hogar.
+                    </p>
+                    <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                        <div class="flex items-center gap-2 text-xs font-bold text-brand-blue bg-blue-100/50 px-3 py-1.5 rounded-full">
+                            <i class="fa-solid fa-graduation-cap"></i> +10,000 Alumnas
+                        </div>
+                        <div class="flex items-center gap-2 text-xs font-bold text-brand-orange bg-orange-100/50 px-3 py-1.5 rounded-full">
+                            <i class="fa-solid fa-heart"></i> 5+ Años de Experiencia
+                        </div>
+                    </div>
+                </div>
+                <!-- Imagen / Avatar Estilizado -->
+                <div class="w-full md:w-2/5 flex justify-center relative">
+                    <div class="relative w-64 h-64 md:w-72 md:h-72 rounded-2xl overflow-hidden shadow-lg border-4 border-white">
+                        <img src="media/image/experta.png" alt="Yuly Mar Rivas" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                    <!-- Decoración flotante -->
+                    <div class="absolute -bottom-4 -right-4 bg-brand-orange text-white text-xs font-bold px-4 py-2 rounded-xl shadow-md flex items-center gap-1.5 animate-bounce" style="animation-duration: 4s;">
+                        <i class="fa-solid fa-medal"></i> Mentora Experta
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Casos de Éxito Reales -->
+    <section id="testimonios" class="py-24 bg-brand-dark text-white relative overflow-hidden">
+        <!-- Decoración -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-brand-blue rounded-full filter blur-[100px] opacity-50"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Resultados que hablan por sí solos</h2>
+                <p class="text-gray-400">Ellas ya están generando ingresos desde sus hogares.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonio 1 -->
+                <div class="bg-gray-800 p-8 rounded-2xl border border-gray-700 relative">
+                    <i class="fa-solid fa-quote-right absolute top-6 right-6 text-4xl text-gray-700"></i>
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="https://placehold.co/100x100/3b82f6/fff?text=M" alt="María" class="w-14 h-14 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold">María C.</h4>
+                            <p class="text-xs text-brand-orange">De empleada a dueña de su marca</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed italic">
+                        "Recuperé la inversión de los materiales y del curso con mis primeros 3 pedidos. Nunca imaginé que algo hecho con mis manos pudiera valer tanto. Ahora tengo encargos todas las semanas."
+                    </p>
+                </div>
+
+                <!-- Testimonio 2 -->
+                <div class="bg-gray-800 p-8 rounded-2xl border border-gray-700 relative">
+                    <i class="fa-solid fa-quote-right absolute top-6 right-6 text-4xl text-gray-700"></i>
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="https://placehold.co/100x100/ff6b35/fff?text=L" alt="Laura" class="w-14 h-14 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold">Laura G.</h4>
+                            <p class="text-xs text-brand-orange">Madre emprendedora</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed italic">
+                        "El módulo de ventas es ORO. Yo sabía hacer cositas básicas, pero aprender a empaquetarlo como una marca de lujo me permitió subir mis precios al doble sin perder clientes."
+                    </p>
+                </div>
+
+                <!-- Testimonio 3 -->
+                <div class="bg-gray-800 p-8 rounded-2xl border border-gray-700 relative">
+                    <i class="fa-solid fa-quote-right absolute top-6 right-6 text-4xl text-gray-700"></i>
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="https://placehold.co/100x100/10b981/fff?text=A" alt="Andrea" class="w-14 h-14 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold">Andrea S.</h4>
+                            <p class="text-xs text-brand-orange">Genera $1,200+ extra al mes</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed italic">
+                        "Empezó como un hobby para desestresarme los fines de semana. Hoy es mi fuente de ingresos principal. La lista de proveedores que dan me ahorró muchísimos errores de dinero."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Bonos Aceleradores -->
+    <section id="bonos" class="py-24 bg-white scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <!-- Encabezado Principal -->
+            <div class="text-center mb-16">
+                <span class="bg-orange-100 text-brand-orange px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">REGÍSTRATE HOY Y RECIBE GRATIS ACCESO A BONOS ESPECIALES:</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-brand-dark mb-4">Super Pack de Regalos Especiales</h2>
+                <p class="text-brand-gray max-w-2xl mx-auto text-sm">Si te inscribes hoy mismo, recibirás acceso 100% gratuito a todos estos regalos y herramientas valoradas en más de <strong class="text-brand-dark">$360 USD</strong>.</p>
+            </div>
+
+            <!-- Bloque 1: Regalos Especiales (3 items) -->
+            <div class="mb-20">
+                <div class="text-center md:text-left mb-8 border-b border-gray-100 pb-4">
+                    <h3 class="text-2xl font-bold text-brand-dark uppercase tracking-tight flex items-center justify-center md:justify-start gap-2">
+                        <i class="fa-solid fa-gift text-brand-orange"></i> Regalos Especiales de Aceleración
+                    </h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Regalo 1: Llaveros Inteligentes (NFC/QR) -->
+                    <div class="group bg-white rounded-2xl p-1 border-2 border-transparent hover:border-brand-orange transition-all duration-300 shadow-sm hover:shadow-saas">
+                        <div class="bg-brand-lightblue rounded-xl p-8 h-full flex flex-col">
+                            <div class="w-12 h-12 bg-white rounded-lg shadow-sm flex items-center justify-center text-brand-blue text-xl mb-4">
+                                <i class="fa-solid fa-qrcode"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-2 group-hover:text-brand-orange transition-colors">Llaveros Inteligentes (NFC/QR)</h3>
+                            <p class="text-brand-gray text-xs flex-grow mb-4">Aprende a elaborar llaveros e identificación para mascotas con enlaces a redes sociales y música. ¡Súper innovador y rentable!</p>
+                            <p class="text-xs font-semibold text-gray-400 line-through">Valor $50 USD</p>
+                            <p class="text-xs font-bold text-green-600">GRATIS HOY</p>
+                        </div>
+                    </div>
+
+                    <!-- Regalo 2: Clase de Costos y Presupuestos -->
+                    <div class="group bg-white rounded-2xl p-1 border-2 border-transparent hover:border-brand-orange transition-all duration-300 shadow-sm hover:shadow-saas">
+                        <div class="bg-brand-lightblue rounded-xl p-8 h-full flex flex-col">
+                            <div class="w-12 h-12 bg-white rounded-lg shadow-sm flex items-center justify-center text-brand-blue text-xl mb-4">
+                                <i class="fa-solid fa-calculator"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-2 group-hover:text-brand-orange transition-colors">Clase de Costos y Presupuestos</h3>
+                            <p class="text-brand-gray text-xs flex-grow mb-4">Aprende a calcular el costo exacto de tus insumos, materiales y mano de obra para fijar precios de venta altamente rentables.</p>
+                            <p class="text-xs font-semibold text-gray-400 line-through">Valor $25 USD</p>
+                            <p class="text-xs font-bold text-green-600">GRATIS HOY</p>
+                        </div>
+                    </div>
+
+                    <!-- Regalo 3: Acceso a la Comunidad VIP de Alumnos -->
+                    <div class="group bg-white rounded-2xl p-1 border-2 border-transparent hover:border-brand-orange transition-all duration-300 shadow-sm hover:shadow-saas">
+                        <div class="bg-brand-lightblue rounded-xl p-8 h-full flex flex-col">
+                            <div class="w-12 h-12 bg-white rounded-lg shadow-sm flex items-center justify-center text-brand-blue text-xl mb-4">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-2 group-hover:text-brand-orange transition-colors">Acceso a la Comunidad VIP de Alumnos</h3>
+                            <p class="text-brand-gray text-xs flex-grow mb-4">Únete a nuestro grupo exclusivo de alumnos en Telegram para recibir soporte, motivación y feedback de tus compañeras.</p>
+                            <p class="text-xs font-semibold text-gray-400 line-through">Valor $80 USD</p>
+                            <p class="text-xs font-bold text-green-600">GRATIS HOY</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bloque 2: SUPER PACK MASTERCLASS (8 items) -->
+            <div>
+                <div class="text-center md:text-left mb-8 border-b border-gray-100 pb-4">
+                    <h3 class="text-2xl md:text-3xl font-extrabold text-brand-dark uppercase tracking-tight flex items-center justify-center md:justify-start gap-2">
+                        <i class="fa-solid fa-graduation-cap text-brand-blue"></i> SUPER PACK MASTERCLASS
+                    </h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Masterclass 1: (Q&A) en Vivo Mensual -->
+                    <div class="group bg-white rounded-2xl p-1 border-2 border-transparent hover:border-brand-orange transition-all duration-300 shadow-sm hover:shadow-saas">
+                        <div class="bg-brand-lightblue rounded-xl p-8 h-full flex flex-col">
+                            <div class="w-12 h-12 bg-white rounded-lg shadow-sm flex items-center justify-center text-brand-blue text-xl mb-4">
+                                <i class="fa-solid fa-comments"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-2 group-hover:text-brand-orange transition-colors">(Q&A) en Vivo Mensual</h3>
+                            <p class="text-brand-gray text-xs flex-grow mb-4">Acceso a sesiones en vivo cada mes con la instructora Yuly Mar Rivas para resolver dudas en tiempo real y asesorar tu negocio.</p>
+                            <p class="text-xs font-semibold text-gray-400 line-through">Valor $60 USD</p>
+                            <p class="text-xs font-bold text-green-600">GRATIS HOY</p>
+                        </div>
+                    </div>
+
+                    <!-- Masterclass 2: Cuadros con Técnica Geoda -->
+                    <div class="group bg-white rounded-2xl p-1 border-2 border-transparent hover:border-brand-orange transition-all duration-300 shadow-sm hover:shadow-saas">
+                        <div class="bg-brand-lightblue rounded-xl p-8 h-full flex flex-col">
+                            <div class="w-12 h-12 bg-white rounded-lg shadow-sm flex items-center justify-center text-brand-blue text-xl mb-4">
+                                <i class="fa-solid fa-gem"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-2 group-hover:text-brand-orange transition-colors">Cuadros con Técnica Geoda</h3>
+                            <p class="text-brand-gray text-xs flex-grow mb-4">Aprende a realizar obras de arte tridimensionales inspiradas en geodas de cuarzo con resina, cristales y pigmentos metálicos.</p>
+                            <p class="text-xs font-semibold text-gray-400 line-through">Valor $25 USD</p>
+                            <p class="text-xs font-bold text-green-600">GRATIS HOY</p>
+                        </div>
+                    </div>
+
+                    <!-- Masterclass 3: Reloj de Pared Océano -->
+                    <div class="group bg-white rounded-2xl p-1 border-2 border-transparent hover:border-brand-orange transition-all duration-300 shadow-sm hover:shadow-saas">
+                        <div class="bg-brand-lightblue rounded-xl p-8 h-full flex flex-col">
+                            <div class="w-12 h-12 bg-white rounded-lg shadow-sm flex items-center justify-center text-brand-blue text-xl mb-4">
+                                <i class="fa-solid fa-water"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-2 group-hover:text-brand-orange transition-colors">Reloj de Pared Océano</h3>
+                            <p class="text-brand-gray text-xs flex-grow mb-4">Domina el vertido de resina con efecto de olas marinas, células de espuma realistas y ensamble de maquinaria.</p>
+                            <p class="text-xs font-semibold text-gray-400 line-through">Valor $25 USD</p>
+                            <p class="text-xs font-bold text-green-600">GRATIS HOY</p>
+                        </div>
+                    </div>
+
+                    <!-- Masterclass 4: Tazas Decoradas con Resina -->
+                    <div class="group bg-white rounded-2xl p-1 border-2 border-transparent hover:border-brand-orange transition-all duration-300 shadow-sm hover:shadow-saas">
+                        <div class="bg-brand-lightblue rounded-xl p-8 h-full flex flex-col">
+                            <div class="w-12 h-12 bg-white rounded-lg shadow-sm flex items-center justify-center text-brand-blue text-xl mb-4">
+                                <i class="fa-solid fa-mug-hot"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-2 group-hover:text-brand-orange transition-colors">Tazas Decoradas con Resina</h3>
+                            <p class="text-brand-gray text-xs flex-grow mb-4">Personaliza tazas y termos con glitter, viniles adhesivos y una capa protectora vitrificada de alta durabilidad.</p>
+                            <p class="text-xs font-semibold text-gray-400 line-through">Valor $25 USD</p>
+                            <p class="text-xs font-bold text-green-600">GRATIS HOY</p>
+                        </div>
+                    </div>
+
+                    <!-- Masterclass 5: Lámpara con Fotos Encapsuladas -->
+                    <div class="group bg-white rounded-2xl p-1 border-2 border-transparent hover:border-brand-orange transition-all duration-300 shadow-sm hover:shadow-saas">
+                        <div class="bg-brand-lightblue rounded-xl p-8 h-full flex flex-col">
+                            <div class="w-12 h-12 bg-white rounded-lg shadow-sm flex items-center justify-center text-brand-blue text-xl mb-4">
+                                <i class="fa-solid fa-lightbulb"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-2 group-hover:text-brand-orange transition-colors">Lámpara con Fotos Encapsuladas</h3>
+                            <p class="text-brand-gray text-xs flex-grow mb-4">Crea lámparas personalizadas en resina transparente con base de madera iluminada LED y fotografías flotantes.</p>
+                            <p class="text-xs font-semibold text-gray-400 line-through">Valor $25 USD</p>
+                            <p class="text-xs font-bold text-green-600">GRATIS HOY</p>
+                        </div>
+                    </div>
+
+                    <!-- Masterclass 6: Recuerdos de Recién Nacido -->
+                    <div class="group bg-white rounded-2xl p-1 border-2 border-transparent hover:border-brand-orange transition-all duration-300 shadow-sm hover:shadow-saas">
+                        <div class="bg-brand-lightblue rounded-xl p-8 h-full flex flex-col">
+                            <div class="w-12 h-12 bg-white rounded-lg shadow-sm flex items-center justify-center text-brand-blue text-xl mb-4">
+                                <i class="fa-solid fa-baby"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-2 group-hover:text-brand-orange transition-colors">Recuerdos de Recién Nacido</h3>
+                            <p class="text-brand-gray text-xs flex-grow mb-4">Encapsula cordón umbilical, primer mechón de cabello y datos de nacimiento para crear recuerdos memorables y costosos.</p>
+                            <p class="text-xs font-semibold text-gray-400 line-through">Valor $25 USD</p>
+                            <p class="text-xs font-bold text-green-600">GRATIS HOY</p>
+                        </div>
+                    </div>
+
+                    <!-- Masterclass 7: Secado de Flores en Casa -->
+                    <div class="group bg-white rounded-2xl p-1 border-2 border-transparent hover:border-brand-orange transition-all duration-300 shadow-sm hover:shadow-saas">
+                        <div class="bg-brand-lightblue rounded-xl p-8 h-full flex flex-col">
+                            <div class="w-12 h-12 bg-white rounded-lg shadow-sm flex items-center justify-center text-brand-blue text-xl mb-4">
+                                <i class="fa-solid fa-leaf"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-2 group-hover:text-brand-orange transition-colors">Secado de Flores en Casa</h3>
+                            <p class="text-brand-gray text-xs flex-grow mb-4">Aprende los métodos profesionales para deshidratar flores naturales conservando sus colores vivos para encapsularlos.</p>
+                            <p class="text-xs font-semibold text-gray-400 line-through">Valor $25 USD</p>
+                            <p class="text-xs font-bold text-green-600">GRATIS HOY</p>
+                        </div>
+                    </div>
+
+                    <!-- Masterclass 8: Técnicas en Tendencia -->
+                    <div class="group bg-white rounded-2xl p-1 border-2 border-transparent hover:border-brand-orange transition-all duration-300 shadow-sm hover:shadow-saas">
+                        <div class="bg-brand-lightblue rounded-xl p-8 h-full flex flex-col">
+                            <div class="w-12 h-12 bg-white rounded-lg shadow-sm flex items-center justify-center text-brand-blue text-xl mb-4">
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-2 group-hover:text-brand-orange transition-colors">Técnicas en Tendencia</h3>
+                            <p class="text-brand-gray text-xs flex-grow mb-4">Lecciones actualizadas con las técnicas, efectos y diseños virales en redes sociales para mantener tu negocio a la vanguardia.</p>
+                            <p class="text-xs font-semibold text-gray-400 line-through">Valor $25 USD</p>
+                            <p class="text-xs font-bold text-green-600">GRATIS HOY</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Pricing (La Oferta) -->
+    <section id="oferta" class="py-24 bg-brand-lightblue relative">
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row border border-gray-100">
+                
+                <!-- Features Col -->
+                <div class="p-8 md:p-12 md:w-3/5 bg-white">
+                    <h3 class="text-2xl font-bold mb-2">Programa Premium: Joyería y Accesorios en Resina</h3>
+                    <p class="text-brand-gray text-sm mb-8">Comienza a construir tu negocio creativo hoy mismo con acceso de por vida al temario completo.</p>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3">
+                            <div class="w-6 h-6 rounded-full bg-blue-100 text-brand-blue flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-check text-xs"></i>
+                            </div>
+                            <span class="text-sm font-medium">Temario Completo de Joyería y Accesorios en Resina (Más de 60 clases en video)</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="w-6 h-6 rounded-full bg-blue-100 text-brand-blue flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-check text-xs"></i>
+                            </div>
+                            <span class="text-sm font-medium">Módulo Especial: Llaveros Inteligentes (NFC/QR)</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="w-6 h-6 rounded-full bg-orange-100 text-brand-orange flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-gift text-xs"></i>
+                            </div>
+                            <span class="text-sm font-medium"><strong class="text-brand-dark">Bono:</strong> 8 Masterclasses Especiales de Regalo</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="w-6 h-6 rounded-full bg-orange-100 text-brand-orange flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-gift text-xs"></i>
+                            </div>
+                            <span class="text-sm font-medium"><strong class="text-brand-dark">Bono:</strong> Clase de Costos y Presupuestos</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="w-6 h-6 rounded-full bg-orange-100 text-brand-orange flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-gift text-xs"></i>
+                            </div>
+                            <span class="text-sm font-medium"><strong class="text-brand-dark">Bono:</strong> Masterclass Mensual de Q&A en Vivo</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="w-6 h-6 rounded-full bg-blue-100 text-brand-blue flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-users text-xs"></i>
+                            </div>
+                            <span class="text-sm font-medium">Acceso a la Comunidad VIP de Alumnos</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="w-6 h-6 rounded-full bg-green-100 text-green-600 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-certificate text-xs"></i>
+                            </div>
+                            <span class="text-sm font-medium">Certificado de Finalización Oficial del Curso</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Price Col -->
+                <div class="p-8 md:p-12 md:w-2/5 bg-gray-50 flex flex-col justify-center border-t md:border-t-0 md:border-l border-gray-100 text-center relative">
+                    <!-- Ribbon -->
+                    <div class="absolute top-0 right-0 bg-brand-orange text-white text-xs font-bold px-4 py-1 rounded-bl-xl uppercase tracking-wider">
+                        Oferta Flash
+                    </div>
+
+                    <!-- Countdown Timer -->
+                    <div class="mb-6 bg-orange-50 border border-orange-100 rounded-xl p-3 text-center">
+                        <p class="text-[10px] text-brand-orange font-bold uppercase tracking-wider mb-2">La oferta especial termina en:</p>
+                        <div class="flex justify-center gap-4 text-brand-dark font-mono font-bold text-lg">
+                            <div>
+                                <span id="timer-hours">00</span>
+                                <span class="text-[9px] text-brand-gray font-sans block font-medium">Horas</span>
+                            </div>
+                            <span>:</span>
+                            <div>
+                                <span id="timer-minutes">00</span>
+                                <span class="text-[9px] text-brand-gray font-sans block font-medium">Minutos</span>
+                            </div>
+                            <span>:</span>
+                            <div>
+                                <span id="timer-seconds">00</span>
+                                <span class="text-[9px] text-brand-gray font-sans block font-medium">Segundos</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-gray-500 font-medium mb-2">Pago Único, Acceso de Por Vida</p>
+                    <div class="flex items-end justify-center gap-2 mb-2">
+                        <span class="text-gray-400 line-through text-2xl font-bold">$74</span>
+                        <div class="text-5xl font-extrabold text-brand-dark">$37</div>
+                    </div>
+                    <p class="text-sm text-brand-gray mb-8">Dólares Americanos (USD)</p>
+
+                    <button onclick="mostrarCheckout()" class="w-full text-center text-lg font-bold bg-brand-orange text-white px-8 py-4 rounded-xl hover:bg-orange-600 hover:-translate-y-1 transition-all shadow-xl shadow-orange-500/30 mb-4 animate-pulse" style="animation-duration: 2s;">
+                        Comprar Ahora
+                    </button>
+
+                    <div class="flex items-center justify-center gap-2 text-xs text-brand-gray font-medium">
+                        <i class="fa-solid fa-lock text-gray-400"></i>
+                        <span>Pago 100% Seguro vía Hotmart</span>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Guarantee -->
+             <div class="mt-8 text-center max-w-xl mx-auto flex flex-col items-center">
+                 <div class="w-16 h-16 rounded-full mb-3 shadow-md bg-blue-50 border border-blue-100 flex items-center justify-center text-brand-blue text-2xl">
+                     <i class="fa-solid fa-shield-halved"></i>
+                 </div>
+                 <h4 class="font-bold text-brand-dark mb-1">Garantía Incondicional de 7 Días</h4>
+                <p class="text-xs text-brand-gray">Si ingresas al programa, revisas las lecciones y sientes que este modelo de negocio no es para ti, te devolvemos el 100% de tu dinero sin hacer preguntas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7.5. Preguntas Frecuentes (FAQ) -->
+    <section id="faq" class="py-24 bg-white scroll-mt-20 border-t border-gray-100">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-brand-blue font-bold tracking-wider text-sm uppercase">Preguntas Frecuentes</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Resuelve tus Dudas de Inmediato</h2>
+                <p class="text-brand-gray">Todo lo que necesitas saber sobre el programa y cómo empezar tu emprendimiento hoy mismo.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <details class="group border border-gray-100 bg-brand-lightblue/30 rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:bg-brand-lightblue/50">
+                    <summary class="flex justify-between items-center font-bold text-brand-dark cursor-pointer list-none">
+                        <span>¿Cuál es la duración del curso?</span>
+                        <span class="transition group-open:rotate-180 text-brand-blue">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-sm text-brand-gray leading-relaxed">
+                        La duración del curso dependerá 100% de ti. Al ser una formación 100% online, tú decides cuándo ver cada una de las lecciones. Los contenidos estarán a tu disposición para siempre, por lo que podrás verlos a tu propio ritmo y repetirlos todas las veces que desees.
+                    </p>
+                </details>
+
+                <!-- FAQ 2 -->
+                <details class="group border border-gray-100 bg-brand-lightblue/30 rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:bg-brand-lightblue/50">
+                    <summary class="flex justify-between items-center font-bold text-brand-dark cursor-pointer list-none">
+                        <span>¿Cómo recibo el acceso al curso después de pagar?</span>
+                        <span class="transition group-open:rotate-180 text-brand-blue">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-sm text-brand-gray leading-relaxed">
+                        Una vez realices el pago, recibirás un correo electrónico de inmediato (el mismo que indicaste al momento de hacer la compra) con las instrucciones de acceso a tu área privada de alumnos. El curso se aloja en la plataforma Hotmart, donde podrás verlo en tu celular, tablet o computadora, con acceso ilimitado y de por vida.
+                    </p>
+                </details>
+
+                <!-- FAQ 3 -->
+                <details class="group border border-gray-100 bg-brand-lightblue/30 rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:bg-brand-lightblue/50">
+                    <summary class="flex justify-between items-center font-bold text-brand-dark cursor-pointer list-none">
+                        <span>¿Qué materiales necesito comprar y dónde los consigo?</span>
+                        <span class="transition group-open:rotate-180 text-brand-blue">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-sm text-brand-gray leading-relaxed">
+                        No te preocupes por eso antes de iniciar. Dentro del curso tenemos clases dedicadas exclusivamente a explicarte cuáles son los materiales necesarios (resina, moldes, balanzas, equipos de seguridad) y te entregamos un directorio secreto de proveedores oficiales que venden a precios mayoristas y hacen envíos en tu propio país.
+                    </p>
+                </details>
+
+                <!-- FAQ 4 -->
+                <details class="group border border-gray-100 bg-brand-lightblue/30 rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:bg-brand-lightblue/50">
+                    <summary class="flex justify-between items-center font-bold text-brand-dark cursor-pointer list-none">
+                        <span>¿Cuáles son los métodos de pago disponibles?</span>
+                        <span class="transition group-open:rotate-180 text-brand-blue">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </span>
+                    </summary>
+                    <div class="mt-4 text-sm text-brand-gray leading-relaxed space-y-2">
+                        <p>Aceptamos múltiples métodos de pago a través de nuestra pasarela de pagos 100% segura:</p>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Tarjetas de débito y crédito.</li>
+                            <li>PayPal.</li>
+                            <li><strong>Pago en Efectivo local</strong> (generando un ticket de pago único con vencimiento de 3 días):
+                                <ul class="list-circle pl-5 mt-1 space-y-0.5">
+                                    <li><strong>México</strong>: OXXO</li>
+                                    <li><strong>Colombia</strong>: Efecty</li>
+                                    <li><strong>Chile</strong>: Sencillito</li>
+                                    <li><strong>Perú</strong>: Pago Efectivo</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </details>
+
+                <!-- FAQ 5 -->
+                <details class="group border border-gray-100 bg-brand-lightblue/30 rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:bg-brand-lightblue/50">
+                    <summary class="flex justify-between items-center font-bold text-brand-dark cursor-pointer list-none">
+                        <span>¿Es seguro realizar el pago en este sitio?</span>
+                        <span class="transition group-open:rotate-180 text-brand-blue">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-sm text-brand-gray leading-relaxed">
+                        Totalmente. El procesamiento del pago es gestionado directamente por Hotmart, uno de los procesadores de pago digital más grandes, robustos y seguros del mundo, presente en más de 160 países. Tus datos bancarios están protegidos bajo protocolos de encriptación HTTPS y SSL de nivel bancario.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-100 py-10 text-center text-brand-gray text-sm">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-center mb-4">
+                <a href="#">
+                    <img src="media/image/logo-DyC-cropped.png" alt="Diseña y Crea Logo" class="h-24 w-auto">
+                </a>
+            </div>
+            <p>© 2026 Diseña y Crea. Todos los derechos reservados.</p>
+            <p class="mt-2 text-xs text-gray-400">Este sitio no es parte de la plataforma de Facebook, Inc. Además, este sitio NO está respaldado por Facebook de ninguna manera.</p>
+        </div>
+    </footer>
+
+    <!-- Modal Customizado (Reemplazo seguro de Alert) -->
+    <div id="checkoutModal" class="fixed inset-0 bg-brand-dark/80 backdrop-blur-sm z-[100] hidden flex items-center justify-center p-4 opacity-0 transition-opacity duration-300">
+        <div class="bg-white rounded-2xl p-8 max-w-sm w-full text-center shadow-2xl transform scale-95 transition-transform duration-300" id="modalContent">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center text-brand-blue text-2xl mx-auto mb-4 animate-spin" style="animation-duration: 3s;">
+                <i class="fa-solid fa-spinner"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Redirigiendo a Hotmart</h3>
+            <p class="text-brand-gray text-sm mb-6">Estamos preparando tu carrito de compras seguro...</p>
+            <button onclick="cerrarCheckout()" class="text-sm font-bold bg-gray-100 text-gray-600 px-6 py-2 rounded-lg hover:bg-gray-200 transition">
+                Cancelar (Modo Demo)
+            </button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        const modal = document.getElementById('checkoutModal');
+        const modalContent = document.getElementById('modalContent');
+
+        function mostrarCheckout() {
+            // Mostrar modal
+            modal.classList.remove('hidden');
+            // Timeout para dar tiempo al navegador de renderizar display:block antes de transicionar opacidad
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modal.classList.add('opacity-100');
+                modalContent.classList.remove('scale-95');
+                modalContent.classList.add('scale-100');
+            }, 10);
+        }
+
+        function cerrarCheckout() {
+            modal.classList.remove('opacity-100');
+            modal.classList.add('opacity-0');
+            modalContent.classList.remove('scale-100');
+            modalContent.classList.add('scale-95');
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300); // Esperar que termine la transición
+        }
+
+        // Countdown Timer Script (Evergreen 24h)
+        function startCountdown() {
+            const now = new Date();
+            const target = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59);
+            
+            function updateTimer() {
+                const currentTime = new Date();
+                let diff = target - currentTime;
+                
+                if (diff <= 0) {
+                    target.setDate(target.getDate() + 1);
+                    diff = target - currentTime;
+                }
+                
+                const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+                const minutes = Math.floor((diff / (1000 * 60)) % 60);
+                const seconds = Math.floor((diff / 1000) % 60);
+                
+                document.getElementById('timer-hours').innerText = String(hours).padStart(2, '0');
+                document.getElementById('timer-minutes').innerText = String(minutes).padStart(2, '0');
+                document.getElementById('timer-seconds').innerText = String(seconds).padStart(2, '0');
+            }
+            
+            updateTimer();
+            setInterval(updateTimer, 1000);
+        }
+        startCountdown();
+    </script>
+</body>
+</html>
