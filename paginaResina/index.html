@@ -124,10 +124,19 @@
                 <!-- Composición visual: Resina + Ventas -->
                 <div class="relative bg-white p-2 rounded-2xl shadow-saas border border-gray-100 z-10">
                     <div class="relative rounded-xl overflow-hidden bg-black group aspect-video w-full">
-                        <video class="w-full h-full" autoplay muted loop controls playsinline preload="metadata">
-                            <source src="media/video/VIDEO.mp4" type="video/mp4">
-                            Tu navegador no soporta el reproductor de video.
-                        </video>
+                        <!-- Portada del Video (Oculta logos y controles hasta hacer clic) -->
+                        <div class="absolute inset-0 w-full h-full cursor-pointer z-20 flex items-center justify-center transition-all duration-300" id="video-cover" onclick="playDriveVideo()">
+                            <!-- Imagen de fondo (Miniatura de alta definición del video) -->
+                            <img src="https://img.youtube.com/vi/uPRxeqfdnh0/maxresdefault.jpg" alt="Diseña y Crea - Resina con Yuli" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.src='https://img.youtube.com/vi/uPRxeqfdnh0/hqdefault.jpg'">
+                            <!-- Capa de oscurecimiento -->
+                            <div class="absolute inset-0 bg-brand-dark/20 group-hover:bg-brand-dark/40 transition-all duration-300"></div>
+                            <!-- Botón Play estilizado con animación de pulso al pasar el cursor -->
+                            <div class="absolute w-20 h-20 bg-brand-orange text-white rounded-full flex items-center justify-center text-3xl shadow-2xl transition-all duration-300 transform group-hover:scale-110 shadow-orange-500/50 hover:bg-orange-600">
+                                <i class="fa-solid fa-play ml-1"></i>
+                            </div>
+                        </div>
+                        <!-- Contenedor donde se inyectará el iframe del reproductor de Google Drive -->
+                        <div id="drive-player" class="w-full h-full hidden"></div>
                     </div>
                     <!-- Pop-up flotante de venta -->
                     <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl border border-gray-100 flex items-center gap-4 animate-bounce" style="animation-duration: 3s;">
@@ -1089,6 +1098,17 @@
     <script>
         const modal = document.getElementById('checkoutModal');
         const modalContent = document.getElementById('modalContent');
+
+        function playDriveVideo() {
+            const cover = document.getElementById('video-cover');
+            const playerContainer = document.getElementById('drive-player');
+            
+            // Inyectar el iframe oficial de previsualización de Google Drive
+            playerContainer.innerHTML = `<iframe class="w-full h-full" src="https://drive.google.com/file/d/1nbC0svErY46Z-9F4hWwwMGjIyCBGz0op/preview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+            
+            cover.classList.add('hidden');
+            playerContainer.classList.remove('hidden');
+        }
 
         function mostrarCheckout() {
             // Mostrar modal
